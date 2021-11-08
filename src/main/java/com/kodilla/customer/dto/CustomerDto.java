@@ -13,4 +13,9 @@ public class CustomerDto {
     private Long id;
     private String firstName;
     private String lastName;
+
+    public CustomerDto(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 }

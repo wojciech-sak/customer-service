@@ -20,3 +20,10 @@ management:
     web:
       exposure:
         include: 'info, health, refresh, metrics, mappings'
+
+eureka:
+  client: ${eureka-client}
+
+feign:
+  hystrix:
+    enabled: true

@@ -5,6 +5,8 @@ import com.kodilla.customer.domain.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
@@ -16,8 +18,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer getCustomer(Long customerId) {
-        return customerDao.findCustomerById(customerId)
-                .orElseThrow(() -> new RuntimeException("No customer found with customerId: " + customerId));
+    public Optional<Customer> getCustomer(Long customerId) {
+        return customerDao.findCustomerById(customerId);
     }
 }
