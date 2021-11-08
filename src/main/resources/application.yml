@@ -26,4 +26,18 @@ eureka:
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false
+
+accounts:
+  ribbon:
+    eureka:
+      enabled: false
+
+    listOfServers: localhost:9999,localhost:9998, localhost:9997
+
+cards:
+  ribbon:
+    eureka:
+      enabled: false
+
+    listOfServers: localhost:5555
